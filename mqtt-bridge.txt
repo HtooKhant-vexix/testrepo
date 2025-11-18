@@ -1,0 +1,20 @@
+connection cloud-bridge
+address f6ce8c16ab1f4b958a2179d249d62bf3.s2.eu.hivemq.cloud:8883
+
+clientid local-bridge-01
+cleansession false
+start_type automatic
+try_private false
+restart_timeout 10
+
+remote_username smart
+remote_password Asdffdsa-4580
+
+bridge_cafile /etc/ssl/certs/ca-certificates.crt
+# bridge_certfile /etc/mosquitto/certs/client.crt
+# bridge_keyfile  /etc/mosquitto/certs/client.key
+
+topic room1/# out 1
+topic cloud/# in 1
+
+log_type all
